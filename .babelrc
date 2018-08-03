@@ -1,0 +1,29 @@
+{
+  "presets": [
+		"flow",
+		"env",
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-webpack-alias",
+          {
+            "config": "./webpack.config.js"
+          }
+        ],
+        [
+          "transform-class-properties",
+          "transform-object-assign",
+          {
+            "spec": true
+          }
+        ]
+      ]
+    }
+  }
+}
